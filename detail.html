@@ -5,22 +5,64 @@
     <meta name="viewport" content="widht=device-widht, initial-scale=1.0">
     <title>Monitoring Situ Gede - Details</title>
     <link rel="stylesheet" href="style.css">
-    <script src="grafik.js"></script>
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="grafik.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
 
     <div class="container">
         <div class="judul monst med lim">
-            <h2>Grafik Ketinggian Air Situ Gede</h2>
+            <h2>Monitoring Danau Situ Gede</h2>
+            <canvas id="myChart" class="chart"></canvas>
+            <h3 class="med lim">Sumber air pada danau Situ Gede dipasok dari sungai yang terdapat di Kabupaten Tasikmalaya yang mengalir melewati beberapa daerah dan dijadikan sumber irigasi persawahan yang dilewati sungai ini.</h3>
+            <a href="index.html">
+                <button class="button poppins med">Home</button>
+            </a>
         </div>
-        <div id="chartdiv"></div>
+
     </div>
-    <script src="https://www.amcharts.com/lib/3/amcharts.js?x"></script>
-    <script src="https://www.amcharts.com/lib/3/serial.js?x"></script>
-    <script src="https://www.amcharts.com/lib/3/themes/dark.js"></script>
+
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: 'Data Ketinggian, Suhu, Kelembaban',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
 
 </body>
 

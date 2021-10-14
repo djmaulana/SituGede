@@ -1,6 +1,6 @@
 setInterval(function() {
     const clock_container = document.querySelector(".time");
-    const date_container = document.querySelector(".date")
+    const date_container = document.querySelector(".date");
     let time = new Date();
     let sec = time.getSeconds();
     let min = time.getMinutes();

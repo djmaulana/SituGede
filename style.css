@@ -178,3 +178,11 @@
         text-align: center;
         margin-top: 50px;
     }
+    
+    .chart {
+        width: 400px;
+        height: 400px;
+        margin-top: 50px;
+        margin-left: 300px;
+        margin-right: 300px;
+    }

@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="weather.js"></script>
     <script src="clock.js"></script>
+
 </head>
 
 <body>
-
     <div class="container">
         <div class="navbar">
             <div id="clock">
@@ -37,19 +38,19 @@
             <div class="col-2">
                 <div class="cuaca">
                     <img src="assets\cerah-berawan.png" alt="ic-cloud">
-                    <h2 class="mons reg tiga">28℃</h2>
+                    <h2 class="mons reg tiga" id="temp"></h2>
                 </div>
-                <h3 class="poppins med dua c">Cerah Berawan</h3>
+                <h3 class="poppins med dua" id="cloud"> Cerah Berawan</h3>
             </div>
             <div class="col-3 m-r">
                 <img src="assets\ic-humidity.png" alt="ic-cloud" class="img-ic">
                 <h3 class="monst li ">Kelembaban</h3>
-                <h3 class="poppins bold lim ">60%</h3>
+                <h3 class="poppins bold lim " id="humidity">60%</h3>
             </div>
             <div class="col-3 m-r">
                 <img src="assets\ic-wind.png" alt="ic-cloud" class="img-ic">
-                <h3 class="monst li ">Angin</h3>
-                <h3 class="poppins bold lim ">3,24 m/detik</h3>
+                <h3 class="monst li ">Kecepatan Angin</h3>
+                <h3 class="poppins bold lim " id="wind">3,24 m/detik</h3>
             </div>
             <div class="col-3">
                 <img src="assets\ic-river.png" alt="ic-cloud" class="img-ic">
